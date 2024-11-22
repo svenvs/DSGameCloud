@@ -9,7 +9,7 @@ import * as path from 'path';
 const app = express();
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
-
+app.use('/', express.static(path.join(__dirname, '..', 'DSGameCloud' ,'browser'))); // dots are for going back one folder and then in the front end app only works only for PR!!! 
 app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to DSGameCloudAPI!' });
 });
