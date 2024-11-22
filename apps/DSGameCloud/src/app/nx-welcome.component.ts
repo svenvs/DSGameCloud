@@ -604,8 +604,8 @@ import { CommonModule } from '@angular/common';
                   />
                 </svg>
                 <span>
-                  Interactive tutorials
-                  <span> Create an app, step-by-step </span>
+                  Interactive tutorials kaas
+                  <span> lolz </span>
                 </span>
                 <svg
                   fill="none"
