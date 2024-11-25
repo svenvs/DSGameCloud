@@ -14,6 +14,10 @@ app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to DSGameCloudAPI!' });
 });
 
+app.get('/api/hello', (req, res) => {
+  res.send({ message: 'Welcome to DSGameCloudAPI!' });
+});
+
 const port = process.env.PORT || 3333;
 const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}/api`);
