@@ -1,0 +1,15 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    <span class="fs-4">Game systems</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    @for (gameSystem of availableGameSytems; track gameSystem.name) {
+      <DSCG-ConsoleItem 
+        (click)="selectSystem(gameSystem.name)"
+        [consoleName]="gameSystem.name" 
+        [consoleImage]="'pulic/gameSystemIcons/'+'gameSystem.image'"></DSCG-ConsoleItem>
+    }
+  </ul>
+</div>
