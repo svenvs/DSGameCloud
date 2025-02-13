@@ -67,7 +67,7 @@ Nx Console is an editor extension that enriches your developer experience. It le
 [Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
 ## Useful links
-
+https://ui.shadcn.com/docs/components/sheet
 Learn more:
 
 - [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
@@ -84,3 +84,10 @@ And join the Nx community:
 
 
 npx nx add @ng-bootstrap/ng-bootstrap --project DSGameCloud
+
+
+
+
+https://github.com/tripss/nx-extend/tree/master/packages/shadcn-ui
+
+https://nx.dev/nx-api/webpack
