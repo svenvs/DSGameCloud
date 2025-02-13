@@ -1,0 +1,10 @@
+<main>
+gameListing
+ttt
+<ul class="user-badge-list">
+    @for (game of games; track game.name) {
+      <li class="user-badge"><a [href]="'/api/gamePlayer/?game='+game.path"> {{game.name}} </a></li>
+    }
+</ul>
+
+</main>
