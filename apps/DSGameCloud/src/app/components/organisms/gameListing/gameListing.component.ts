@@ -1,11 +1,13 @@
 import { Component, OnInit } from "@angular/core";
+import { RouterLink } from "@angular/router";
 import { GamesApiService } from "../../../services/gamesApi.service";
 import { ScraperApiService } from "../../../services/scraperApi.service";
 import { GameAPIModel } from '@dsgame-cloud/shared'
 @Component({
     selector: 'DSCG-GameListing',
     standalone: true,
-    templateUrl: 'gameListing.html'
+    templateUrl: 'gameListing.html',
+    imports:[RouterLink],
 })
 //https://medium.com/@sandeep15mca/rest-api-call-in-angular-application-289d907020ff
 //https://medium.com/@aqeelabbas3972/services-in-angular-b125a5b5690e

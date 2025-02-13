@@ -86,7 +86,7 @@ And join the Nx community:
 npx nx add @ng-bootstrap/ng-bootstrap --project DSGameCloud
 
 
-
+https://github.com/gothinkster/angular-realworld-example-app
 
 https://github.com/tripss/nx-extend/tree/master/packages/shadcn-ui
 
