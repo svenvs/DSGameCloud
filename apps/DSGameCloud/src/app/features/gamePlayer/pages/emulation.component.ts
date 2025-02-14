@@ -24,7 +24,7 @@ import { AsyncPipe } from "@angular/common";
 })
 export class emulationComponent implements OnInit {
   destroyRef = inject(DestroyRef);
-  public gameName!: SafeResourceUrl
+  public gameName ='';
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -33,7 +33,12 @@ export class emulationComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.gameName = this.sanitizer.bypassSecurityTrustResourceUrl(this.route.snapshot.params["gameName"]);
+    this.gameName = this.route.snapshot.params["gameName"];
+    console.log(this.gameName);
+    let emulatorWindow = (<HTMLIFrameElement>document.querySelector('#emulatorIframe')).contentWindow;
+    emulatorWindow?.addEventListener('load', ()=>{
+      emulatorWindow?.postMessage({gameName: this.gameName}, '*' );
+    })
   }
 
 }

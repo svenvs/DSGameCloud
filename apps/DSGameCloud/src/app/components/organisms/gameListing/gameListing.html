@@ -3,7 +3,7 @@
     @for (game of games; track game.name) {
       <li class="user-badge">
         
-        <a [routerLink]="['player','emulation', { gameName: game.name }]"> {{game.name}} </a>
+        <a [routerLink]="['player','emulation', { gameName: game.path }]"> {{game.name}} </a>
       </li>
     }
 </ul>
