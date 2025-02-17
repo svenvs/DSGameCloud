@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
+    aaaah
     <div style='width:640px;height:480px;max-width:100%'>
       <div id='game'></div>
   </div>
   
-  <script type='text/javascript'>
+  <!-- <script type='text/javascript'>
       EJS_player = '#game';
       // Can also be fceumm or nestopia
-      EJS_core = 'nes';
+      EJS_core = '';
       EJS_startOnLoaded = true
       // Lightgun
       EJS_lightgun = false; // can be true or false
@@ -28,15 +29,16 @@
     
 
     window.addEventListener('message', (event) =>{
-      if(event.data.gameName){
+      if(event.data.gameName && event.data.gameEmulator){
         EJS_gameUrl = event.data.gameName;
+        EJS_core = event.data.gameEmulator;
         var script = document.createElement('script');
         script.setAttribute('src', 'https://cdn.emulatorjs.org/stable/data/loader.js');
         script.setAttribute('type', 'text/javascript');
         document.getElementsByTagName('head')[0].appendChild(script);
       }
     })
-  </script>
+  </script> -->
 
     <script type="module" src="/src/main.ts"></script>
   </body>

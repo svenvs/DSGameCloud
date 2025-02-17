@@ -5,7 +5,7 @@ import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../dist/apps/DSgamePlayer',
+  cacheDir: '../../node_modules/.vite',
   server: {
     port: 2200,
     host: 'localhost',

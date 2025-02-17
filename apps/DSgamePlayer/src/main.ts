@@ -1,2 +1,2 @@
-import './app/app.element';
-console.log('test')
+
+console.log('testeeee')

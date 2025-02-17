@@ -1,12 +1,12 @@
 export interface GameAPIModel{
   name: string;
   path: string;
-  system: gameSystems;
+  system: string;
   emulator: string;
 }
 
 export enum gameSystems {
-  NES = 'NES',
-  SNES = 'SNES',
-  N64 = 'N64'
+  NES = 'nes',
+  SNES = 'snes',
+  N64 = 'n64'
 }

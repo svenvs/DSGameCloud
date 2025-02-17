@@ -10,7 +10,7 @@ const routes: Routes = [
                 component: emulationComponent
             },
             {
-                path: "emulation:gameName",
+                path: "emulation:gameName:gameEmulator",
                 component: emulationComponent
             }
         ]

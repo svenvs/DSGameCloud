@@ -1,12 +1,4 @@
 {
-    
-  "/gameplayer": {
-    "target": "http://localhost:2200",
-    "secure": false,
-    "pathRewrite": {
-      "^/gameplayer": ""
-  }
-  },
   "/api": {
       "target": "http://localhost:3333",
       "secure": false
