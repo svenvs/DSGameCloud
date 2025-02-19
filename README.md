@@ -94,3 +94,7 @@ https://nx.dev/nx-api/webpack
 
 
 https://retro.gg/dashboard
+https://www.screenscraper.fr/forumsujet.php?frub=12&fsuj=11645&numpagesujet=0&plateforme=&gameid=&romid=&companyid=&membreid=
+
+docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:latest
+localhost:27017

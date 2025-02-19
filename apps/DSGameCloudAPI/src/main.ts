@@ -10,6 +10,7 @@ import games from './controllers/gamesController'
 import scraper from './controllers/scraperController'
 import { ROMS_PATH } from './constants';
 import { createProxyMiddleware } from 'http-proxy-middleware';
+import { connect } from 'mongoose';
 
 const app = express();
 
@@ -36,7 +37,8 @@ app.get('/api', async (req, res) => {
 });
 
 const port = process.env.PORT || 3333;
-const server = app.listen(port, () => {
+const server = app.listen(port, async() => {
+  await connect('mongodb://127.0.0.1:27017/mongodb').catch(error=>console.log(error));
   console.log(`Listening at http://localhost:${port}/api`);
 });
 server.on('error', console.error);

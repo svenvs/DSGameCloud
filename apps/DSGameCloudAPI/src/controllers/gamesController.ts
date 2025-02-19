@@ -1,10 +1,11 @@
 import express from 'express';
-import { games } from '../models/gameModel';
+import { Game } from '../models/gameModel';
+
 const router = express.Router();
 
-router.get('/', function(req, res) {
-
-    res.send(games);
+router.get('/', async function(req, res) {
+    let allGames = await Game.find();
+    res.send(allGames);
 });
 
 router.post('/', function(req, res) {

@@ -1,10 +1,10 @@
 import express from 'express';
-import { games } from '../models/gameModel';
+
 const router = express.Router();
 
 router.get('/', function(req, res) {
 
-    res.send(games);
+    res.send({nein: 'lol'});
 });
 
 router.post('/', function(req, res) {
