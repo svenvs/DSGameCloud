@@ -2,7 +2,6 @@ import express, { query } from 'express';
 import { getAllFiles } from 'get-all-files'
 import { ROMS_PATH } from '../constants';
 import { Game } from '../models/gameModel';
-import { Emulator, emulators } from '../models/emulatorModel';
 import { RetroSpirit } from '../services/retroSpiritApi';
 
 const retroSpititInsante = new RetroSpirit(process.env.RERSKEY);

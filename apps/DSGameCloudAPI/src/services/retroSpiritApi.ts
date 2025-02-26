@@ -22,4 +22,14 @@ export class RetroSpirit{
         const json = await response.json();
         return json.results;
     }
+
+    async findBestPossibleGame(query: string): Promise<rsGameResult>{
+        let gameName = query.split('.')[0]
+        let fileExtension = query.split('.')
+        const results = await this.searchByGameName(query);
+        let result;
+// /\s*\(.*?\)\s*/g
+  
+        return result
+    }
 }
