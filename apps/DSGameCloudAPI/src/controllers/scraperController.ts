@@ -9,15 +9,15 @@ const router = express.Router();
 //insertmany interdesting
 router.get('/', async (req, res) => {
     const roms = await getAllFiles(ROMS_PATH).toArray();
-    await Game.deleteMany(); // just for now :D
+    await Game.deleteMany(); //#TODO just for now :D
     await roms.forEach(async element =>{
-        let deconstructedPath = element.split('\\');
+        let deconstructedPath = element.split('/');
         let tobeSavedGame = new Game({
-            name: deconstructedPath[5],
-            system: deconstructedPath[4],
-            emulator: deconstructedPath[4],
+            name: deconstructedPath[6],
+            system: deconstructedPath[5],
+            emulator: deconstructedPath[5],
 
-            path: `/api/roms/${deconstructedPath[4]}/${deconstructedPath[5]}`
+            path: `/api/roms/${deconstructedPath[5]}/${deconstructedPath[6]}`
         });
         await tobeSavedGame.save();
     })

@@ -38,7 +38,8 @@ app.get('/api', async (req, res) => {
 
 const port = process.env.PORT || 3333;
 const server = app.listen(port, async() => {
-  await connect('mongodb://127.0.0.1:27017/mongodb').catch(error=>console.log(error));
+  console.log(process.env.RERSKEY)
+  await connect('mongodb://mongodb:27017/mongodb').catch(error=>console.log(error));
   console.log(`Listening at http://localhost:${port}/api`);
 });
 server.on('error', console.error);

@@ -14,8 +14,26 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 3333:3333
-
+      - 5555:5555
+    networks:
+      - node-network
+    depends_on:
+      - mongodb
+    develop:
+      watch:
+        - path: ./dist
+          action: rebuild
+          target: /usr/src/app
+  mongodb:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    networks:
+      - node-network
+networks:
+  node-network:
+    driver: bridge
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
 # start the database before your application. The `db-data` volume persists the
@@ -49,3 +67,4 @@ services:
 #   db-password:
 #     file: db/password.txt
 
+#docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:latest
